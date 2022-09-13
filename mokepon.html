@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>MOKEPON</title>
+        <script src="./js/mokepon.js"></script>
     </head>
     <body>
         <h1>🌱💧🔥 MOKEPON 🔥💧🌱</h1>
@@ -22,14 +23,14 @@
             <label for="grounda">Grounda 🌱</label>
             <br>
 
-            <button>Seleccionar</button>
+            <button id="pet-button">Seleccionar</button>
         </section>
 
         <section id="attack-selection">
             <h2>Elige tu ataque:</h2>
 
-            <p>Tu mascota tiene <span>3</span> vidas</p>
-            <p>Las mascota del enemigo tiene <span>3</span> vidas</p>
+            <p>Tu mascota tiene <span id="player-pet">PLAYER-PET</span> vidas</p>
+            <p>Las mascota del enemigo tiene <span id="enemy-pet">ENEMY-PET</span> vidas</p>
 
             <p>
                 <button>Fuego 🔥</button>
