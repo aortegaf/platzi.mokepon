@@ -7,13 +7,14 @@ function playerPetSelection(){
     let inputFyre = document.getElementById("fyre")
     let inputSplash = document.getElementById("splash")
     let inputGrounda = document.getElementById("grounda")
+    let spanPlayerPet = document.getElementById("player-pet")
 
     if(inputFyre.checked){
-        alert("Seleccionaste a Fyre") 
+        spanPlayerPet.innerHTML = "Fyre"
     } else if (inputSplash.checked){
-        alert("Seleccionaste a Splash")
+        spanPlayerPet.innerHTML = "Splash"
     } else if (inputGrounda.checked){
-        alert("Seleccionaste a Grounda")
+        spanPlayerPet.innerHTML = "Grounda"
     } else {
         alert("No has seleccionado mascota")
     }
