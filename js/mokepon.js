@@ -1,4 +1,5 @@
 let playerAttack
+let enemyAttack
 
 function startGame(){
     let petButton = document.getElementById("pet-button")
@@ -50,17 +51,49 @@ function enemyPetSelection(){
 
 function fireAttack(){
     playerAttack = "Fuego 🔥"
-    alert(playerAttack)
+    enemyRandomAttack()
 }
 
 function waterAttack(){
     playerAttack = "Agua 💧"
-    alert(playerAttack)
+    enemyRandomAttack()
 }
 
 function groundAttack(){
     playerAttack = "Tierra 🌱"
-    alert(playerAttack)
+    enemyRandomAttack()
+}
+
+function enemyRandomAttack(){
+    let attackCode = random(1,3)
+
+    if(attackCode == 1){
+        enemyAttack = "Fuego 🔥"
+    } else if (attackCode == 2){
+        enemyAttack = "Agua 💧"
+    } else if (attackCode == 3){
+        enemyAttack = "Tierra 🌱"
+    }
+
+    fight()
+}
+
+function fight(){
+    if(playerAttack == enemyAttack){
+        attacksHistory("EMPATE")
+    } else if((playerAttack == "Fuego 🔥" && enemyAttack == "Tierra 🌱") || (playerAttack == "Agua 💧" && enemyAttack == "Fuego 🔥") || (playerAttack == "Tierra 🌱" && enemyAttack == "Agua 💧")){
+        attacksHistory("GANASTE")
+    } else {
+        attacksHistory("PERDISTE")
+    }
+}
+
+function attacksHistory(result){
+    let attacksHistoryMessage = document.createElement("p")
+    attacksHistoryMessage.innerHTML = "Atacaste con " + playerAttack +  " | El enemigo atacó con " + enemyAttack + "--> " + result
+
+    let attacksHistorySection = document.getElementById("attacks-history")
+    attacksHistorySection.appendChild(attacksHistoryMessage)
 }
 
 window.addEventListener("load", startGame)
