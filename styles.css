@@ -1,0 +1,11 @@
+/* 
+CSS visual guide: https://cssreference.io/ 
+HTML color codes: https://htmlcolorcodes.com/es/
+*/
+
+.title {
+    color: hotpink;
+    width: 100px;
+    height: 50px;
+    background-color: aqua;
+}

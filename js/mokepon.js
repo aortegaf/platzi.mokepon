@@ -4,6 +4,11 @@ let playerLifes = 3
 let enemyLifes = 3
 
 function startGame(){
+    let attackSelectionSection = document.getElementById("attack-selection")
+    attackSelectionSection.style.display = "none"
+    let resetSection = document.getElementById("reset")
+    resetSection.style.display = "none"
+
     let petButton = document.getElementById("pet-button")
     petButton.addEventListener("click", playerPetSelection)
 
@@ -19,6 +24,11 @@ function startGame(){
 }
 
 function playerPetSelection(){
+    let attackSelectionSection = document.getElementById("attack-selection")
+    attackSelectionSection.style.display = "block"
+    let petSelectionSection = document.getElementById("pet-selection")
+    petSelectionSection.style.display = "none"
+
     let inputFyre = document.getElementById("fyre")
     let inputSplash = document.getElementById("splash")
     let inputGrounda = document.getElementById("grounda")
@@ -127,6 +137,9 @@ function fightFinalResult(finalResult){
     waterButton.disabled = true
     let groundButton = document.getElementById("ground-button")
     groundButton.disabled = true
+
+    let resetSection = document.getElementById("reset")
+    resetSection.style.display = "block"
 }
 
 function resetGame(){
