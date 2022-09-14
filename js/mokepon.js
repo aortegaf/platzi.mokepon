@@ -95,6 +95,12 @@ function fight(){
         playerLifes--
         spanPlayerPetLifes.innerHTML = playerLifes
     }
+
+    if(playerLifes == 0){
+        fightFinalResult("TU MASCOTA FUE DERROTADA 💀")
+    } else if(enemyLifes == 0) {
+        fightFinalResult("TU MASCOTA SALIÓ VICTORIOSA 🥇")
+    }
 }
 
 function attacksHistory(result){
@@ -103,6 +109,14 @@ function attacksHistory(result){
 
     let attacksHistorySection = document.getElementById("attacks-history")
     attacksHistorySection.appendChild(attacksHistoryMessage)
+}
+
+function fightFinalResult(finalResult){
+    let fightResult = document.createElement("p")
+    fightResult.innerHTML = finalResult
+
+    let attacksHistorySection = document.getElementById("attacks-history")
+    attacksHistorySection.appendChild(fightResult)
 }
 
 window.addEventListener("load", startGame)
