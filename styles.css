@@ -1,11 +1,14 @@
-/* 
-CSS visual guide: https://cssreference.io/ 
-HTML color codes: https://htmlcolorcodes.com/es/
-*/
-
 .title {
     color: hotpink;
-    width: 100px;
+    width: 425px;
     height: 50px;
-    background-color: aqua;
+    background-color: teal;
+}
+
+#pet-selection {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
