@@ -13,6 +13,9 @@ function startGame(){
     waterButton.addEventListener("click", waterAttack)
     let groundButton = document.getElementById("ground-button")
     groundButton.addEventListener("click", groundAttack)
+
+    let resetButton = document.getElementById("reset-button")
+    resetButton.addEventListener("click", resetGame)
 }
 
 function playerPetSelection(){
@@ -117,6 +120,17 @@ function fightFinalResult(finalResult){
 
     let attacksHistorySection = document.getElementById("attacks-history")
     attacksHistorySection.appendChild(fightResult)
+
+    let fireButton = document.getElementById("fire-button")
+    fireButton.disabled = true
+    let waterButton = document.getElementById("water-button")
+    waterButton.disabled = true
+    let groundButton = document.getElementById("ground-button")
+    groundButton.disabled = true
+}
+
+function resetGame(){
+    location.reload()
 }
 
 window.addEventListener("load", startGame)
