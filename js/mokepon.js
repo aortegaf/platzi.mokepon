@@ -1,5 +1,7 @@
 let playerAttack
 let enemyAttack
+let playerLifes = 3
+let enemyLifes = 3
 
 function startGame(){
     let petButton = document.getElementById("pet-button")
@@ -79,12 +81,19 @@ function enemyRandomAttack(){
 }
 
 function fight(){
+    let spanPlayerPetLifes = document.getElementById("player-lifes")
+    let spanEnemyPetLifes = document.getElementById("enemy-lifes")
+    
     if(playerAttack == enemyAttack){
         attacksHistory("EMPATE")
     } else if((playerAttack == "Fuego 🔥" && enemyAttack == "Tierra 🌱") || (playerAttack == "Agua 💧" && enemyAttack == "Fuego 🔥") || (playerAttack == "Tierra 🌱" && enemyAttack == "Agua 💧")){
         attacksHistory("GANASTE")
+        enemyLifes--
+        spanEnemyPetLifes.innerHTML = enemyLifes
     } else {
         attacksHistory("PERDISTE")
+        playerLifes--
+        spanPlayerPetLifes.innerHTML = playerLifes
     }
 }
 
