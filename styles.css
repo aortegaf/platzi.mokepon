@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&family=Titan+One&display=swap');
 
 body {
     background-color: #FDEEDC;
-    font-family: 'Titan One', cursive;
+    font-family: 'Arima Madurai', cursive;
 }
 
 #pet-selection {
@@ -18,12 +18,13 @@ body {
     font-size: 75px;
     text-shadow: 5px 5px #FFD8A9;
     margin: 30px;
+    font-family: 'Titan One', cursive;
 }
 
 .subtitle {
     color: #F1A661;
-    font-size: 35px;
-    margin: 10px;
+    font-size: 30px;
+    margin: 20px;
 }
 
 .pets {
@@ -35,17 +36,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 225px;
+    width: 250px;
     height: 100px;
     background-color: #FFD8A9;
     padding: 10px;
     box-sizing: border-box;
     border-radius: 25px;
-    color: #F1A661;
+    color: black;
 }
 
 .mokepon img {
-    width: 100px;
+    width: 120px;
 }
 
 input {
@@ -53,10 +54,12 @@ input {
 }
 
 #pet-button {
-    background-color: #F1A661;
-    color: #FFD8A9;
-    font-size: 15px;
-    border: 1px solid #E38B29;
-    padding: 10px;
-    margin-top: 30px;
+    background-color: transparent;
+    color: #F1A661;
+    font-size: 20px;
+    border: 2px solid #F1A661;
+    border-radius: 25px;
+    padding: 12px;
+    margin-top: 50px;
+    font-family: 'Titan One', cursive;
 }
