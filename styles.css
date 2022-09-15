@@ -1,15 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+
 body {
     background-color: #FDEEDC;
-}
-
-.title {
-    color: #E38B29;
-    font-size: 50px;
-    text-shadow: 2px 2px #F1A661;
-}
-
-.subtitle {
-    color: #F1A661
+    font-family: 'Titan One', cursive;
 }
 
 #pet-selection {
@@ -20,12 +13,39 @@ body {
     align-items: center;
 }
 
+.title {
+    color: #E38B29;
+    font-size: 75px;
+    text-shadow: 5px 5px #FFD8A9;
+    margin: 30px;
+}
+
+.subtitle {
+    color: #F1A661;
+    font-size: 35px;
+    margin: 10px;
+}
+
+.pets {
+    display: flex;
+    gap: 10px;
+}
+
 .mokepon {
-    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 225px;
     height: 100px;
     background-color: #FFD8A9;
     padding: 10px;
     box-sizing: border-box;
+    border-radius: 25px;
+    color: #F1A661;
+}
+
+.mokepon img {
+    width: 100px;
 }
 
 input {
